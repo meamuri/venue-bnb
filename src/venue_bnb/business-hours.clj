@@ -2,21 +2,26 @@
   ""
   (:import java.util.Date
            java.time.Clock
+           java.time.Instant
+           java.time.LocalTime
            java.time.LocalDateTime
            java.time.ZoneOffset))
 
+(defn- date->local-date-time [date]
+  (LocalDateTime/ofInstant (.toInstant date) ZoneOffset/UTC))
 
 (defn- days
   ""
   [^java.util.Date start]
-  (let [start* (LocalDateTime/ofInstant (.toInstant start) ZoneOffset/UTC)]
+  (let [start* (date->local-date-time start)]
     (iterate #(.plusDays % 1) start*)))
 
-(defn- till-now
+(defn- days-until
   ""
-  [^Date start]
-  (let [now (LocalDateTime/now (Clock/systemUTC))]
-   (take-while #(.isBefore % now) (days start))))
+  ([^Date start]
+   (days-until start (Date/from (Instant/now))))
+  ([^Date start ^Date end]
+   (take-while #(.isBefore % end) (days start))))
 
 (defn- scedule-entity->date
   ""
