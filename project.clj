@@ -4,4 +4,10 @@
 
   :profiles
   {:dev
-   {:source-paths ["env/dev"]}})
+   {:source-paths ["env/dev"]}
+
+   :kaocha
+   {:dependencies [[lambdaisland/kaocha "1.0.861"]]}}
+
+  :aliases
+  {"kaocha" ["with-profile" "+kaocha" "run" "-m" "kaocha.runner"]})
