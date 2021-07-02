@@ -1,11 +1,9 @@
 (ns venue-bnb.business-hours
   ""
   (:import java.util.Date
-           java.time.Clock
            java.time.DayOfWeek
-           java.time.Instant
-           java.time.LocalTime
            java.time.LocalDateTime
+           java.time.temporal.ChronoUnit
            java.time.ZoneOffset))
 
 (defn- date->local-date-time
@@ -16,7 +14,11 @@
 (defn- days
   ""
   [^LocalDateTime start]
-  (iterate #(.plusDays % 1) start))
+  (iterate (fn [day]
+             (-> day
+               (.plusDays 1)
+               (.withHour 0)
+               (.truncatedTo ChronoUnit/HOURS))) start))
 
 (defn- days-range
   ""
@@ -41,9 +43,9 @@
   ""
   [schedule]
   (fn [{:keys [day-of-week from to]}]
-    (let [hours (get schedule day-of-week)]
+    (let [hours (get schedule day-of-week #{})]
       (->> hours
-           (filter #(and (> % from) (< % to)))  ;; TODO: fix it, it is'not identity!
+           (filter #(and (> % from) (< % to)))
            count))))
 
 (defn- day->internal-representation
@@ -64,8 +66,55 @@
         prepared-days (map (day->internal-representation start to) days)
         schedule' (flattent-schedule schedule)
         hours-per-day (map (processor schedule') prepared-days)]
-    (reduce + 0 hours-per-day)))
+    (apply + hours-per-day)))
+
+(defn- compute-current-day
+  [day hours-remainder schedule]
+  (let [day-of-week (.getDayOfWeek day)
+        day-schedule (get schedule day-of-week #{})
+        business-hours (sort day-schedule)
+        business-hours-of-current-day (count business-hours)]
+    (if (> hours-remainder business-hours-of-current-day)
+      (- hours-remainder business-hours-of-current-day)
+      0)))
+
+(defn- find-in-reminder
+  [days schedule]
+  (let [day (first days)
+        day-of-week (.getDayOfWeek day)
+        day-schedule (get schedule day-of-week #{})
+        business-hours (sort day-schedule)]
+    (if (seq business-hours)
+      (-> day
+          (.withHour (first business-hours))
+          (.toInstant ZoneOffset/UTC)
+          Date/from)
+      (recur (rest days) schedule))))
+
+(defn- compute-date
+  ""
+  [days hours-remainder schedule]
+  (let [day (first days)
+        day-of-week (.getDayOfWeek day)
+        day-schedule (get schedule day-of-week #{})
+        business-hours (sort day-schedule)
+        h (-> (drop hours-remainder business-hours) first)]
+    (if (some? h)
+      (-> day
+          (.withHour h)
+          (.toInstant ZoneOffset/UTC)
+          Date/from)
+      (find-in-reminder (rest days) schedule))))
 
 (defn calculate-date
   ""
-  [schedule from business-hours])
+  [schedule ^Date from business-hours]
+  (let [days (days (date->local-date-time from))
+        schedule' (flattent-schedule schedule)]
+    (loop [h business-hours
+           days' days]
+      (let [d (first days')
+            updated-h (compute-current-day d h schedule')]
+        (if (= 0 updated-h)
+          (compute-date days' h schedule')
+          (recur updated-h (rest days')))))))
