@@ -1,0 +1,483 @@
+[{:venue "smitham-group", :booking-requests 11, :reservations 4, :response-rate 80, :reviews 1, :rating 5.0}
+ {:venue "turcotte-turcotte-and-turcotte", :booking-requests 17, :reservations nil, :response-rate 100}
+ {:venue "mccullough-llc"
+  :booking-requests 13
+  :reservations 1
+  :response-rate 100
+  :reviews 3
+  :rating 3.333333333333333}
+ {:venue "bode-bode-and-bode", :booking-requests 19, :reservations 1, :response-rate 90}
+ {:venue "ortizortiz", :booking-requests 12, :reservations 3, :response-rate 100, :reviews 1, :rating 5.0}
+ {:venue "brakus-group", :booking-requests 23, :reservations 2, :response-rate 70}
+ {:venue "yundt-group", :booking-requests 12, :reservations 1, :response-rate 70}
+ {:venue "nader-llc", :booking-requests 6, :reservations nil, :response-rate 83}
+ {:venue "lubowitz-lubowitz-and-lubowitz", :booking-requests 14, :reservations nil, :response-rate 40}
+ {:venue "schumm-inc", :booking-requests 11, :reservations 1, :response-rate 100}
+ {:venue "rempel-and-sons", :booking-requests 5, :reservations nil, :response-rate 100}
+ {:venue "okeefe-inc", :booking-requests 16, :reservations nil, :response-rate 70}
+ {:venue "harvey-group", :booking-requests 11, :reservations nil, :response-rate 100, :reviews 2, :rating 5.0}
+ {:venue "jacobsonjacobson", :booking-requests 6, :reservations nil, :response-rate 0}
+ {:venue "mcculloughmccullough", :booking-requests 15, :reservations 1, :response-rate 88, :reviews 1, :rating 4.0}
+ {:venue "hoppe-hoppe-and-hoppe", :booking-requests 7, :reservations 3, :response-rate 30}
+ {:venue "schmeler-inc"
+  :booking-requests 27
+  :reservations 5
+  :response-rate 90
+  :reviews 3
+  :rating 4.666666666666667}
+ {:venue "glover-group", :booking-requests 16, :reservations 3, :response-rate 80, :reviews 2, :rating 4.5}
+ {:venue "williamson-inc", :booking-requests 11, :reservations 2, :response-rate 60, :reviews 3, :rating 4.0}
+ {:venue "murazikmurazik", :booking-requests 5, :reservations nil, :response-rate 0}
+ {:venue "cormiercormier", :booking-requests 31, :reservations 1, :response-rate 100, :reviews 2, :rating 4.5}
+ {:venue "koepp-koepp-and-koepp", :booking-requests 19, :reservations 1, :response-rate 90}
+ {:venue "purdy-purdy-and-purdy", :booking-requests 5, :reservations nil, :response-rate 80}
+ {:venue "pourospouros", :booking-requests 23, :reservations 2, :response-rate 100, :reviews 3, :rating 5.0}
+ {:venue "hoeger-hoeger-and-hoeger", :booking-requests 10, :reservations 1, :response-rate 100, :reviews 1, :rating 5.0}
+ {:venue "wiegand-wiegand-and-wiegand", :booking-requests 5, :reservations nil, :response-rate 75}
+ {:venue "skiles-skiles-and-skiles", :booking-requests 11, :reservations 3, :response-rate 100, :reviews 1, :rating 5.0}
+ {:venue "zemlak-zemlak-and-zemlak", :booking-requests 16, :reservations 3, :response-rate 70, :reviews 1, :rating 5.0}
+ {:venue "towne-inc", :booking-requests 19, :reservations 5, :response-rate 90}
+ {:venue "klocko-group", :booking-requests 8, :reservations nil, :response-rate 80}
+ {:venue "tremblay-tremblay-and-tremblay", :booking-requests 21, :reservations nil, :response-rate 100}
+ {:venue "blick-group", :booking-requests 6, :reservations 3, :response-rate 100}
+ {:venue "gottliebgottlieb", :booking-requests 30, :reservations 1, :response-rate 100, :reviews 3, :rating 5.0}
+ {:venue "king-king-and-king", :booking-requests 10, :reservations 1, :response-rate 100, :reviews 3, :rating 5.0}
+ {:venue "boehm-boehm-and-boehm", :booking-requests 13, :reservations nil, :response-rate 90}
+ {:venue "johnstonjohnston", :booking-requests 18, :reservations 1, :response-rate 90, :reviews 1, :rating 1.0}
+ {:venue "schoen-and-sons", :booking-requests 11, :reservations nil, :response-rate 50}
+ {:venue "marvin-marvin-and-marvin", :booking-requests 6, :reservations nil, :response-rate 90, :reviews 1, :rating 5.0}
+ {:venue "dickinson-group", :booking-requests 6, :reservations nil, :response-rate 83, :reviews 1, :rating 1.0}
+ {:venue "rath-rath-and-rath", :booking-requests 63, :reservations 5, :response-rate 40, :reviews 2, :rating 4.5}
+ {:venue "mayertmayert", :booking-requests 11, :reservations 2, :response-rate 88}
+ {:venue "schaden-schaden-and-schaden"
+  :booking-requests 16
+  :reservations nil
+  :response-rate 80
+  :reviews 2
+  :rating 5.0}
+ {:venue "towne-towne-and-towne", :booking-requests 23, :reservations 2, :response-rate 90, :reviews 1, :rating 5.0}
+ {:venue "wolff-inc", :booking-requests 110, :reservations 5, :response-rate 100, :reviews 1, :rating 5.0}
+ {:venue "krajcik-inc", :booking-requests 9, :reservations nil, :response-rate 70}
+ {:venue "parker-group", :booking-requests 14, :reservations nil, :response-rate 80}
+ {:venue "russel-inc", :booking-requests 9, :reservations nil, :response-rate 0, :reviews 1, :rating 4.0}
+ {:venue "harveyharvey", :booking-requests 14, :reservations 4, :response-rate 100, :reviews 2, :rating 5.0}
+ {:venue "bayer-bayer-and-bayer", :booking-requests 14, :reservations nil, :response-rate 90, :reviews 1, :rating 5.0}
+ {:venue "reichelreichel", :booking-requests 9, :reservations nil, :response-rate 90}
+ {:venue "yundtyundt", :booking-requests 10, :reservations 1, :response-rate 71, :reviews 1, :rating 5.0}
+ {:venue "dickinson-and-sons", :booking-requests 5, :reservations 1, :response-rate 20}
+ {:venue "romaguera-inc", :booking-requests 201, :reservations 5, :response-rate 100, :reviews 1, :rating 5.0}
+ {:venue "hackett-hackett-and-hackett"
+  :booking-requests 107
+  :reservations 10
+  :response-rate 90
+  :reviews 1
+  :rating 5.0}
+ {:venue "okon-inc", :booking-requests 8, :reservations 1, :response-rate 60, :reviews 1, :rating 4.0}
+ {:venue "klein-klein-and-klein", :booking-requests 5, :reservations 1, :response-rate 100}
+ {:venue "kuhic-kuhic-and-kuhic", :booking-requests 13, :reservations nil, :response-rate 40, :reviews 1, :rating 5.0}
+ {:venue "bednar-and-sons", :booking-requests 6, :reservations 1, :response-rate 87}
+ {:venue "orn-orn-and-orn", :booking-requests 7, :reservations nil, :response-rate 80}
+ {:venue "donnelly-group", :booking-requests 6, :reservations 1, :response-rate 66}
+ {:venue "veum-veum-and-veum", :booking-requests 16, :reservations 1, :response-rate 100}
+ {:venue "hegmann-hegmann-and-hegmann"
+  :booking-requests 20
+  :reservations 3
+  :response-rate 100
+  :reviews 3
+  :rating 4.666666666666667}
+ {:venue "berge-berge-and-berge", :booking-requests 18, :reservations 3, :response-rate 100, :reviews 2, :rating 5.0}
+ {:venue "wolf-wolf-and-wolf", :booking-requests 17, :reservations 4, :response-rate 100, :reviews 4, :rating 5.0}
+ {:venue "runolfsdottir-runolfsdottir-and-runolfsdottir", :booking-requests 22, :reservations nil, :response-rate 90}
+ {:venue "schroederschroeder", :booking-requests 75, :reservations 1, :response-rate 80}
+ {:venue "shanahan-llc", :booking-requests 6, :reservations 1, :response-rate 100, :reviews 1, :rating 5.0}
+ {:venue "vandervort-group", :booking-requests 5, :reservations 1, :response-rate 71, :reviews 2, :rating 5.0}
+ {:venue "schambergerschamberger", :booking-requests 12, :reservations nil, :response-rate 100}
+ {:venue "franeckifranecki", :booking-requests 10, :reservations 1, :response-rate 60, :reviews 1, :rating 5.0}
+ {:venue "dicki-dicki-and-dicki", :booking-requests 8, :reservations 1, :response-rate 60}
+ {:venue "parisianparisian", :booking-requests 20, :reservations 1, :response-rate 100}
+ {:venue "bruenbruen", :booking-requests 86, :reservations 11, :response-rate 70}
+ {:venue "nienow-inc", :booking-requests 8, :reservations nil, :response-rate 0, :reviews 1, :rating 5.0}
+ {:venue "brekkebrekke", :booking-requests 100, :reservations 20, :response-rate 100, :reviews 2, :rating 5.0}
+ {:venue "satterfield-satterfield-and-satterfield"
+  :booking-requests 13
+  :reservations 1
+  :response-rate 80
+  :reviews 1
+  :rating 5.0}
+ {:venue "ondricka-ondricka-and-ondricka", :booking-requests 6, :reservations nil, :response-rate 100}
+ {:venue "roob-group", :booking-requests 6, :reservations 1, :response-rate 60, :reviews 1, :rating 5.0}
+ {:venue "hilll-hilll-and-hilll", :booking-requests 13, :reservations 2, :response-rate 80, :reviews 1, :rating 4.0}
+ {:venue "schmelerschmeler", :booking-requests 7, :reservations nil, :response-rate 60}
+ {:venue "parker-llc", :booking-requests 6, :reservations nil, :response-rate 100, :reviews 2, :rating 3.0}
+ {:venue "howehowe", :booking-requests 37, :reservations 1, :response-rate 100, :reviews 3, :rating 5.0}
+ {:venue "ruecker-and-sons", :booking-requests 19, :reservations 1, :response-rate 70, :reviews 1, :rating 5.0}
+ {:venue "kirlinkirlin", :booking-requests 7, :reservations nil, :response-rate 70}
+ {:venue "murray-murray-and-murray", :booking-requests 6, :reservations nil, :response-rate 100}
+ {:venue "walkerwalker", :booking-requests 38, :reservations 1, :response-rate 100, :reviews 1, :rating 5.0}
+ {:venue "schaefer-group", :booking-requests 122, :reservations 4, :response-rate 20, :reviews 1, :rating 5.0}
+ {:venue "stark-stark-and-stark", :booking-requests 19, :reservations 1, :response-rate 90}
+ {:venue "heathcote-inc", :booking-requests 6, :reservations nil, :response-rate 90}
+ {:venue "purdypurdy", :booking-requests 13, :reservations 1, :response-rate 70}
+ {:venue "towne-and-sons", :booking-requests 26, :reservations 6, :response-rate 70}
+ {:venue "kovacek-inc", :booking-requests 48, :reservations 4, :response-rate 90}
+ {:venue "uptonupton", :booking-requests 8, :reservations nil, :response-rate 30}
+ {:venue "kertzmann-group", :booking-requests 9, :reservations nil, :response-rate 90}
+ {:venue "hills-hills-and-hills", :booking-requests 5, :reservations nil, :response-rate 100}
+ {:venue "crooks-llc", :booking-requests 9, :reservations nil, :response-rate 22}
+ {:venue "ullrich-ullrich-and-ullrich", :booking-requests 41, :reservations 1, :response-rate 80}
+ {:venue "maggiomaggio", :booking-requests 9, :reservations 2, :response-rate 70}
+ {:venue "shields-shields-and-shields"
+  :booking-requests 38
+  :reservations 5
+  :response-rate 100
+  :reviews 3
+  :rating 5.0}
+ {:venue "sauer-sauer-and-sauer", :booking-requests 23, :reservations nil, :response-rate 100, :reviews 1, :rating 5.0}
+ {:venue "parisian-group", :booking-requests 7, :reservations nil, :response-rate 100}
+ {:venue "gottlieb-group", :booking-requests 5, :reservations nil, :response-rate 20}
+ {:venue "farrell-inc", :booking-requests 17, :reservations nil, :response-rate 80, :reviews 1, :rating 5.0}
+ {:venue "bednar-group", :booking-requests 16, :reservations 1, :response-rate 100, :reviews 1, :rating 5.0}
+ {:venue "simonis-simonis-and-simonis"
+  :booking-requests 12
+  :reservations 2
+  :response-rate 80
+  :reviews 1
+  :rating 5.0}
+ {:venue "pacocha-pacocha-and-pacocha", :booking-requests 5, :reservations nil, :response-rate 80}
+ {:venue "wymanwyman", :booking-requests 12, :reservations 2, :response-rate 100}
+ {:venue "collier-collier-and-collier", :booking-requests 5, :reservations 1, :response-rate 62}
+ {:venue "carroll-group", :booking-requests 14, :reservations nil, :response-rate 100}
+ {:venue "kilback-kilback-and-kilback"
+  :booking-requests 33
+  :reservations 10
+  :response-rate 90
+  :reviews 4
+  :rating 4.25}
+ {:venue "heathcote-heathcote-and-heathcote"
+  :booking-requests 18
+  :reservations nil
+  :response-rate 90
+  :reviews 1
+  :rating 5.0}
+ {:venue "cummeratacummerata", :booking-requests 10, :reservations 1, :response-rate 80}
+ {:venue "zulauf-zulauf-and-zulauf", :booking-requests 5, :reservations nil, :response-rate 90}
+ {:venue "gorczany-gorczany-and-gorczany", :booking-requests 20, :reservations 3, :response-rate 100}
+ {:venue "wisozk-wisozk-and-wisozk"
+  :booking-requests 148
+  :reservations 14
+  :response-rate 100
+  :reviews 3
+  :rating 4.0}
+ {:venue "hoeger-inc", :booking-requests 22, :reservations 2, :response-rate 100, :reviews 1, :rating 3.0}
+ {:venue "gusikowskigusikowski", :booking-requests 8, :reservations 1, :response-rate 62}
+ {:venue "gaylord-gaylord-and-gaylord"
+  :booking-requests 8
+  :reservations 1
+  :response-rate 100
+  :reviews 1
+  :rating 5.0}
+ {:venue "kozey-kozey-and-kozey", :booking-requests 18, :reservations nil, :response-rate 80, :reviews 5, :rating 4.0}
+ {:venue "barrows-inc", :booking-requests 5, :reservations nil, :response-rate 100}
+ {:venue "dietrich-dietrich-and-dietrich"
+  :booking-requests 7
+  :reservations nil
+  :response-rate 100
+  :reviews 2
+  :rating 1.0}
+ {:venue "morar-morar-and-morar", :booking-requests 13, :reservations nil, :response-rate 50}
+ {:venue "runolfsson-runolfsson-and-runolfsson", :booking-requests 14, :reservations 1, :response-rate 80}
+ {:venue "morar-inc", :booking-requests 21, :reservations 3, :response-rate 70}
+ {:venue "brakus-brakus-and-brakus", :booking-requests 6, :reservations 1, :response-rate 75}
+ {:venue "braunbraun", :booking-requests 9, :reservations nil, :response-rate 77}
+ {:venue "prohaska-inc", :booking-requests 26, :reservations nil, :response-rate 100, :reviews 4, :rating 4.5}
+ {:venue "considineconsidine", :booking-requests 21, :reservations 2, :response-rate 100}
+ {:venue "gerlach-group", :booking-requests 23, :reservations 2, :response-rate 90, :reviews 1, :rating 5.0}
+ {:venue "kundekunde", :booking-requests 5, :reservations 1, :response-rate 100}
+ {:venue "heidenreichheidenreich", :booking-requests 10, :reservations 1, :response-rate 75, :reviews 2, :rating 4.5}
+ {:venue "hodkiewicz-llc", :booking-requests 14, :reservations 2, :response-rate 25}
+ {:venue "price-price-and-price", :booking-requests 13, :reservations nil, :response-rate 100, :reviews 2, :rating 4.5}
+ {:venue "hermiston-group", :booking-requests 22, :reservations 1, :response-rate 100, :reviews 2, :rating 5.0}
+ {:venue "ritchie-ritchie-and-ritchie", :booking-requests 59, :reservations 6, :response-rate 90}
+ {:venue "hammes-hammes-and-hammes", :booking-requests 7, :reservations nil, :response-rate 50}
+ {:venue "moore-moore-and-moore", :booking-requests 16, :reservations 1, :response-rate 50}
+ {:venue "lindlind", :booking-requests 38, :reservations 4, :response-rate 100}
+ {:venue "mitchell-mitchell-and-mitchell", :booking-requests 8, :reservations 2, :response-rate 75}
+ {:venue "brown-brown-and-brown", :booking-requests 22, :reservations nil, :response-rate 90}
+ {:venue "macejkovic-and-sons", :booking-requests 22, :reservations 6, :response-rate 90, :reviews 1, :rating 1.0}
+ {:venue "collins-llc", :booking-requests 5, :reservations nil, :response-rate 90}
+ {:venue "mcclure-mcclure-and-mcclure", :booking-requests 8, :reservations nil, :response-rate 70}
+ {:venue "monahanmonahan"
+  :booking-requests 59
+  :reservations 2
+  :response-rate 70
+  :reviews 3
+  :rating 3.666666666666667}
+ {:venue "dickinsondickinson"
+  :booking-requests 73
+  :reservations 18
+  :response-rate 100
+  :reviews 14
+  :rating 4.714285714285714}
+ {:venue "rempel-rempel-and-rempel", :booking-requests 19, :reservations 3, :response-rate 90}
+ {:venue "jacobsjacobs", :booking-requests 13, :reservations nil, :response-rate 90}
+ {:venue "abernathy-abernathy-and-abernathy"
+  :booking-requests 6
+  :reservations 1
+  :response-rate 100
+  :reviews 1
+  :rating 5.0}
+ {:venue "ziemann-inc", :booking-requests 18, :reservations nil, :response-rate 50}
+ {:venue "walker-walker-and-walker", :booking-requests 5, :reservations nil, :response-rate 55}
+ {:venue "pouros-llc", :booking-requests 19, :reservations 2, :response-rate 20}
+ {:venue "mills-mills-and-mills", :booking-requests 42, :reservations 5, :response-rate 100, :reviews 5, :rating 4.2}
+ {:venue "ortiz-inc", :booking-requests 10, :reservations nil, :response-rate 100}
+ {:venue "binsbins", :booking-requests 16, :reservations 1, :response-rate 100, :reviews 1, :rating 5.0}
+ {:venue "wilkinsonwilkinson", :booking-requests 12, :reservations 2, :response-rate 100}
+ {:venue "deckowdeckow", :booking-requests 12, :reservations nil, :response-rate 100}
+ {:venue "cassincassin", :booking-requests 11, :reservations nil, :response-rate 100}
+ {:venue "robelrobel", :booking-requests 43, :reservations nil, :response-rate 80, :reviews 2, :rating 4.5}
+ {:venue "jakubowskijakubowski", :booking-requests 24, :reservations nil, :response-rate 70}
+ {:venue "botsfordbotsford"
+  :booking-requests 8
+  :reservations 5
+  :response-rate 100
+  :reviews 11
+  :rating 4.636363636363636}
+ {:venue "welch-inc", :booking-requests 13, :reservations nil, :response-rate 100}
+ {:venue "bogan-bogan-and-bogan", :booking-requests 6, :reservations 1, :response-rate 100}
+ {:venue "hacketthackett", :booking-requests 16, :reservations nil, :response-rate 30}
+ {:venue "sengersenger", :booking-requests 5, :reservations 1, :response-rate 50}
+ {:venue "corkery-corkery-and-corkery", :booking-requests 6, :reservations nil, :response-rate 66}
+ {:venue "lynchlynch", :booking-requests 39, :reservations 11, :response-rate 70, :reviews 4, :rating 4.5}
+ {:venue "rogahn-inc", :booking-requests 10, :reservations 2, :response-rate 75}
+ {:venue "harrisharris", :booking-requests 18, :reservations nil, :response-rate 100}
+ {:venue "gerlach-gerlach-and-gerlach", :booking-requests 10, :reservations 2, :response-rate 90}
+ {:venue "hoegerhoeger"
+  :booking-requests 42
+  :reservations 3
+  :response-rate 90
+  :reviews 6
+  :rating 4.833333333333333}
+ {:venue "eichmanneichmann", :booking-requests 14, :reservations 2, :response-rate 100}
+ {:venue "eichmann-llc", :booking-requests 86, :reservations 12, :response-rate 80}
+ {:venue "gusikowski-gusikowski-and-gusikowski", :booking-requests 7, :reservations 3, :response-rate 30}
+ {:venue "strosinstrosin", :booking-requests 5, :reservations nil, :response-rate 100}
+ {:venue "sauersauer", :booking-requests 13, :reservations 3, :response-rate 100}
+ {:venue "murray-group"
+  :booking-requests 26
+  :reservations 3
+  :response-rate 60
+  :reviews 3
+  :rating 3.333333333333333}
+ {:venue "kreigerkreiger"
+  :booking-requests 5
+  :reservations nil
+  :response-rate 100
+  :reviews 3
+  :rating 4.666666666666667}
+ {:venue "kshlerinkshlerin", :booking-requests 5, :reservations nil, :response-rate 80}
+ {:venue "homenick-llc"
+  :booking-requests 10
+  :reservations 4
+  :response-rate 30
+  :reviews 3
+  :rating 4.666666666666667}
+ {:venue "ortiz-ortiz-and-ortiz", :booking-requests 66, :reservations 16, :response-rate 100}
+ {:venue "bogisich-bogisich-and-bogisich", :booking-requests 11, :reservations nil, :response-rate 70}
+ {:venue "ratkeratke", :booking-requests 7, :reservations nil, :response-rate 70}
+ {:venue "thompson-thompson-and-thompson", :booking-requests 5, :reservations nil, :response-rate 88}
+ {:venue "fisherfisher", :booking-requests 7, :reservations nil, :response-rate 71}
+ {:venue "jast-inc", :booking-requests 19, :reservations 2, :response-rate 100, :reviews 1, :rating 1.0}
+ {:venue "pagacpagac", :booking-requests 10, :reservations 1, :response-rate 0}
+ {:venue "mckenzie-mckenzie-and-mckenzie"
+  :booking-requests 22
+  :reservations nil
+  :response-rate 90
+  :reviews 1
+  :rating 5.0}
+ {:venue "klein-group", :booking-requests 24, :reservations nil, :response-rate 50}
+ {:venue "feil-feil-and-feil", :booking-requests 6, :reservations nil, :response-rate 100}
+ {:venue "macejkovic-inc", :booking-requests 33, :reservations 6, :response-rate 100, :reviews 2, :rating 4.5}
+ {:venue "herzog-herzog-and-herzog", :booking-requests 13, :reservations 6, :response-rate 100, :reviews 3, :rating 5.0}
+ {:venue "morarmorar", :booking-requests 152, :reservations 16, :response-rate 100, :reviews 1, :rating 5.0}
+ {:venue "gislason-gislason-and-gislason", :booking-requests 18, :reservations 3, :response-rate 80}
+ {:venue "dibbert-llc", :booking-requests 21, :reservations 1, :response-rate 70}
+ {:venue "reinger-group", :booking-requests 54, :reservations 8, :response-rate 100, :reviews 5, :rating 5.0}
+ {:venue "nolan-group", :booking-requests 12, :reservations nil, :response-rate 80}
+ {:venue "baumbach-and-sons", :booking-requests 18, :reservations nil, :response-rate 30}
+ {:venue "halvorsonhalvorson", :booking-requests 6, :reservations nil, :response-rate 100, :reviews 3, :rating 4.0}
+ {:venue "brown-group", :booking-requests 32, :reservations nil, :response-rate 50}
+ {:venue "stiedemann-llc", :booking-requests 5, :reservations nil, :response-rate 70}
+ {:venue "harber-and-sons", :booking-requests 12, :reservations nil, :response-rate 100}
+ {:venue "krajcikkrajcik"
+  :booking-requests 5
+  :reservations 2
+  :response-rate 100
+  :reviews 3
+  :rating 4.333333333333333}
+ {:venue "huelshuels", :booking-requests 7, :reservations nil, :response-rate 70}
+ {:venue "king-inc", :booking-requests 30, :reservations nil, :response-rate 90}
+ {:venue "welch-and-sons", :booking-requests 5, :reservations 1, :response-rate 90, :reviews 1, :rating 5.0}
+ {:venue "hilll-and-sons", :booking-requests 5, :reservations nil, :response-rate 100}
+ {:venue "rowe-rowe-and-rowe", :booking-requests 8, :reservations nil, :response-rate 100}
+ {:venue "flatley-group", :booking-requests 19, :reservations 7, :response-rate 70}
+ {:venue "pollich-llc", :booking-requests 31, :reservations 1, :response-rate 100, :reviews 1, :rating 5.0}
+ {:venue "streich-streich-and-streich", :booking-requests 36, :reservations 4, :response-rate 100}
+ {:venue "champlin-llc", :booking-requests 9, :reservations nil, :response-rate 60, :reviews 1, :rating 3.0}
+ {:venue "hyatt-llc", :booking-requests 5, :reservations nil, :response-rate 80}
+ {:venue "lebsack-group", :booking-requests 110, :reservations 7, :response-rate 100, :reviews 5, :rating 4.2}
+ {:venue "reingerreinger", :booking-requests 9, :reservations nil, :response-rate 40}
+ {:venue "swift-group", :booking-requests 46, :reservations 7, :response-rate 90, :reviews 5, :rating 4.0}
+ {:venue "kassulkekassulke"
+  :booking-requests 63
+  :reservations 3
+  :response-rate 100
+  :reviews 3
+  :rating 4.666666666666667}
+ {:venue "bergnaum-bergnaum-and-bergnaum"
+  :booking-requests 10
+  :reservations nil
+  :response-rate 80
+  :reviews 1
+  :rating 5.0}
+ {:venue "cartwrightcartwright", :booking-requests 23, :reservations nil, :response-rate 80}
+ {:venue "kautzer-inc", :booking-requests 10, :reservations nil, :response-rate 90, :reviews 1, :rating 3.0}
+ {:venue "murazik-group", :booking-requests 5, :reservations 1, :response-rate 80}
+ {:venue "lindgrenlindgren", :booking-requests 8, :reservations nil, :response-rate 55}
+ {:venue "hermannhermann", :booking-requests 10, :reservations nil, :response-rate 50}
+ {:venue "medhurst-group", :booking-requests 6, :reservations 1, :response-rate 90}
+ {:venue "spinka-spinka-and-spinka", :booking-requests 9, :reservations 3, :response-rate 70}
+ {:venue "doyledoyle", :booking-requests 5, :reservations 1, :response-rate 90, :reviews 1, :rating 3.0}
+ {:venue "zemlakzemlak"
+  :booking-requests 77
+  :reservations 10
+  :response-rate 30
+  :reviews 7
+  :rating 4.571428571428571}
+ {:venue "lefflerleffler", :booking-requests 7, :reservations nil, :response-rate 90}
+ {:venue "boehmboehm", :booking-requests 7, :reservations nil, :response-rate 83}
+ {:venue "kiehn-inc", :booking-requests 37, :reservations 3, :response-rate 100, :reviews 2, :rating 5.0}
+ {:venue "smith-smith-and-smith", :booking-requests 10, :reservations nil, :response-rate 100}
+ {:venue "gerlach-inc", :booking-requests 9, :reservations 2, :response-rate 100}
+ {:venue "greenfelder-inc", :booking-requests 6, :reservations nil, :response-rate 20}
+ {:venue "kemmer-inc", :booking-requests 10, :reservations nil, :response-rate 20}
+ {:venue "ebert-ebert-and-ebert", :booking-requests 15, :reservations 1, :response-rate 100, :reviews 1, :rating 1.0}
+ {:venue "yundt-and-sons", :booking-requests 8, :reservations nil, :response-rate 87}
+ {:venue "schneiderschneider", :booking-requests 16, :reservations nil, :response-rate 50}
+ {:venue "connelly-and-sons", :booking-requests 10, :reservations 4, :response-rate 100}
+ {:venue "hauck-and-sons", :booking-requests 28, :reservations 1, :response-rate 70}
+ {:venue "shields-llc", :booking-requests 8, :reservations nil, :response-rate 0}
+ {:venue "ryan-inc", :booking-requests 9, :reservations 1, :response-rate 90}
+ {:venue "kuhickuhic", :booking-requests 48, :reservations 3, :response-rate 10, :reviews 1, :rating 5.0}
+ {:venue "gulgowski-group", :booking-requests 5, :reservations nil, :response-rate 40}
+ {:venue "flatley-flatley-and-flatley", :booking-requests 42, :reservations 3, :response-rate 100}
+ {:venue "blandablanda", :booking-requests 14, :reservations 2, :response-rate 90}
+ {:venue "faheyfahey", :booking-requests 47, :reservations 7, :response-rate 70, :reviews 2, :rating 4.0}
+ {:venue "lueilwitzlueilwitz", :booking-requests 6, :reservations 1, :response-rate 80}
+ {:venue "hermistonhermiston", :booking-requests 59, :reservations 2, :response-rate 60, :reviews 3, :rating 5.0}
+ {:venue "white-white-and-white", :booking-requests 19, :reservations 1, :response-rate 77, :reviews 1, :rating 4.0}
+ {:venue "metzmetz", :booking-requests 7, :reservations nil, :response-rate 100}
+ {:venue "witting-witting-and-witting", :booking-requests 16, :reservations nil, :response-rate 90}
+ {:venue "halvorson-and-sons", :booking-requests 6, :reservations nil, :response-rate 100}
+ {:venue "wunsch-wunsch-and-wunsch", :booking-requests 12, :reservations nil, :response-rate 100}
+ {:venue "ernser-llc", :booking-requests 11, :reservations nil, :response-rate 60}
+ {:venue "kshlerin-inc", :booking-requests 6, :reservations 1, :response-rate 80}
+ {:venue "murphymurphy", :booking-requests 20, :reservations 1, :response-rate 50, :reviews 1, :rating 3.0}
+ {:venue "stark-inc", :booking-requests 14, :reservations 2, :response-rate 70, :reviews 1, :rating 5.0}
+ {:venue "marquardtmarquardt", :booking-requests 53, :reservations 9, :response-rate 100, :reviews 1, :rating 5.0}
+ {:venue "wunsch-inc", :booking-requests 10, :reservations 2, :response-rate 77}
+ {:venue "thielthiel", :booking-requests 28, :reservations 1, :response-rate 90}
+ {:venue "brekke-llc", :booking-requests 44, :reservations 2, :response-rate 90, :reviews 1, :rating 4.0}
+ {:venue "wisoky-group", :booking-requests 13, :reservations 1, :response-rate 70, :reviews 2, :rating 5.0}
+ {:venue "ziemann-ziemann-and-ziemann", :booking-requests 24, :reservations 2, :response-rate 100}
+ {:venue "kunde-inc", :booking-requests 82, :reservations 3, :response-rate 90}
+ {:venue "wyman-wyman-and-wyman", :booking-requests 40, :reservations 6, :response-rate 90}
+ {:venue "nadernader", :booking-requests 17, :reservations 2, :response-rate 60, :reviews 2, :rating 5.0}
+ {:venue "conn-llc", :booking-requests 20, :reservations 3, :response-rate 90}
+ {:venue "yundt-yundt-and-yundt"
+  :booking-requests 86
+  :reservations 7
+  :response-rate 80
+  :reviews 3
+  :rating 4.333333333333333}
+ {:venue "olsonolson", :booking-requests 19, :reservations 3, :response-rate 90, :reviews 3, :rating 5.0}
+ {:venue "douglas-and-sons", :booking-requests 19, :reservations 5, :response-rate 100}
+ {:venue "bashirian-bashirian-and-bashirian", :booking-requests 15, :reservations nil, :response-rate 50}
+ {:venue "kunde-kunde-and-kunde", :booking-requests 16, :reservations 1, :response-rate 20}
+ {:venue "macgyver-inc", :booking-requests 11, :reservations nil, :response-rate 0, :reviews 3, :rating 5.0}
+ {:venue "whitewhite", :booking-requests 47, :reservations 3, :response-rate 100, :reviews 3, :rating 4.0}
+ {:venue "larsonlarson", :booking-requests 7, :reservations 3, :response-rate 100}
+ {:venue "hudsonhudson", :booking-requests 9, :reservations nil, :response-rate 100}
+ {:venue "hane-inc", :booking-requests 15, :reservations 7, :response-rate 100, :reviews 4, :rating 4.5}
+ {:venue "pfeffer-pfeffer-and-pfeffer", :booking-requests 32, :reservations 2, :response-rate 100}
+ {:venue "erdman-erdman-and-erdman", :booking-requests 19, :reservations 3, :response-rate 90, :reviews 1, :rating 4.0}
+ {:venue "schmitt-llc", :booking-requests 7, :reservations nil, :response-rate 100, :reviews 2, :rating 5.0}
+ {:venue "vonrueden-vonrueden-and-vonrueden", :booking-requests 19, :reservations nil, :response-rate 70}
+ {:venue "windler-inc", :booking-requests 21, :reservations 4, :response-rate 80, :reviews 3, :rating 4.333333333333333}
+ {:venue "auerauer", :booking-requests 20, :reservations 2, :response-rate 80}
+ {:venue "hermiston-inc", :booking-requests 11, :reservations nil, :response-rate 90}
+ {:venue "halvorson-halvorson-and-halvorson", :booking-requests 5, :reservations nil, :response-rate 20}
+ {:venue "cartercarter", :booking-requests 15, :reservations nil, :response-rate 80, :reviews 1, :rating 4.0}
+ {:venue "mayer-and-sons", :booking-requests 5, :reservations nil, :response-rate 100}
+ {:venue "howell-howell-and-howell", :booking-requests 6, :reservations nil, :response-rate 70, :reviews 1, :rating 3.0}
+ {:venue "crookscrooks", :booking-requests 8, :reservations 2, :response-rate 100}
+ {:venue "treutel-treutel-and-treutel", :booking-requests 6, :reservations nil, :response-rate 100}
+ {:venue "damore-llc", :booking-requests 5, :reservations nil, :response-rate 70}
+ {:venue "walker-and-sons", :booking-requests 6, :reservations 2, :response-rate 80}
+ {:venue "nicolasnicolas", :booking-requests 23, :reservations 1, :response-rate 100}
+ {:venue "haleyhaley", :booking-requests 8, :reservations 1, :response-rate 90}
+ {:venue "considine-llc", :booking-requests 5, :reservations nil, :response-rate 100}
+ {:venue "jacobi-group", :booking-requests 7, :reservations nil, :response-rate 100}
+ {:venue "rutherford-and-sons", :booking-requests 5, :reservations 1, :response-rate 85}
+ {:venue "mckenzie-and-sons", :booking-requests 10, :reservations 1, :response-rate 100}
+ {:venue "rippin-inc", :booking-requests 31, :reservations nil, :response-rate 30}
+ {:venue "macgyvermacgyver", :booking-requests 78, :reservations 2, :response-rate 100}
+ {:venue "rolfsonrolfson", :booking-requests 11, :reservations 1, :response-rate 100}
+ {:venue "feeney-feeney-and-feeney", :booking-requests 12, :reservations 2, :response-rate 100, :reviews 5, :rating 5.0}
+ {:venue "wisoky-wisoky-and-wisoky", :booking-requests 30, :reservations 2, :response-rate 90}
+ {:venue "tromptromp", :booking-requests 15, :reservations 1, :response-rate 100}
+ {:venue "kulaskulas", :booking-requests 11, :reservations 1, :response-rate 62, :reviews 1, :rating 5.0}
+ {:venue "leannon-leannon-and-leannon", :booking-requests 9, :reservations 1, :response-rate 80}
+ {:venue "oreillyoreilly", :booking-requests 11, :reservations nil, :response-rate 90}
+ {:venue "schumm-schumm-and-schumm", :booking-requests 16, :reservations nil, :response-rate 100}
+ {:venue "schneider-group", :booking-requests 9, :reservations 1, :response-rate 100, :reviews 1, :rating 5.0}
+ {:venue "huels-huels-and-huels", :booking-requests 8, :reservations nil, :response-rate 100}
+ {:venue "wehner-wehner-and-wehner", :booking-requests 8, :reservations nil, :response-rate 88}
+ {:venue "marksmarks"
+  :booking-requests 5
+  :reservations nil
+  :response-rate 100
+  :reviews 3
+  :rating 4.666666666666667}
+ {:venue "hammes-and-sons", :booking-requests 5, :reservations 1, :response-rate 90}
+ {:venue "hirthe-hirthe-and-hirthe", :booking-requests 8, :reservations nil, :response-rate 100}
+ {:venue "andersonanderson", :booking-requests 26, :reservations 2, :response-rate 90}
+ {:venue "prohaska-group", :booking-requests 12, :reservations nil, :response-rate 90}
+ {:venue "nikolaus-nikolaus-and-nikolaus"
+  :booking-requests 17
+  :reservations 1
+  :response-rate 100
+  :reviews 2
+  :rating 5.0}
+ {:venue "goodwingoodwin", :booking-requests 52, :reservations 2, :response-rate 90}
+ {:venue "hackett-llc", :booking-requests 25, :reservations 4, :response-rate 90, :reviews 4, :rating 4.5}
+ {:venue "nitzschenitzsche", :booking-requests 18, :reservations 3, :response-rate 100, :reviews 2, :rating 4.0}
+ {:venue "weber-weber-and-weber", :booking-requests 15, :reservations nil, :response-rate 60}
+ {:venue "little-llc", :booking-requests 27, :reservations 1, :response-rate 20, :reviews 3, :rating 2.666666666666667}
+ {:venue "klein-llc", :booking-requests 14, :reservations 3, :response-rate 100, :reviews 2, :rating 4.5}
+ {:venue "daughertydaugherty", :booking-requests 19, :reservations 9, :response-rate 80, :reviews 5, :rating 4.8}
+ {:venue "gerholdgerhold", :booking-requests 5, :reservations nil, :response-rate 90}
+ {:venue "wolff-llc"
+  :booking-requests 426
+  :reservations 46
+  :response-rate 100
+  :reviews 6
+  :rating 3.833333333333333}
+ {:venue "zboncakzboncak", :booking-requests 9, :reservations 1, :response-rate 90, :reviews 1, :rating 5.0}
+ {:venue "spinkaspinka", :booking-requests 7, :reservations 3, :response-rate 100, :reviews 2, :rating 5.0}
+ {:venue "wisozk-and-sons", :booking-requests 16, :reservations 2, :response-rate 90}
+ {:venue "cormier-cormier-and-cormier", :booking-requests 11, :reservations nil, :response-rate 80}
+ {:venue "bernier-inc", :booking-requests 9, :reservations 1, :response-rate 100, :reviews 1, :rating 5.0}
+ {:venue "hyatt-hyatt-and-hyatt", :booking-requests 6, :reservations nil, :response-rate 80}
+ {:venue "little-little-and-little", :booking-requests 11, :reservations 1, :response-rate 100, :reviews 1, :rating 5.0}
+ {:venue "collins-collins-and-collins", :booking-requests 7, :reservations nil, :response-rate 0}]
