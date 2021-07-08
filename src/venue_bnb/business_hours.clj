@@ -1,5 +1,6 @@
 (ns venue-bnb.business-hours
-  ""
+  "Each venue has different opening hours for their booking office.
+   Module allows to compute different useful time-related stuff."
   {:author "Roman Dronov"}
   (:require [malli.core :as m])
   (:import java.util.Date
@@ -9,12 +10,10 @@
            java.time.ZoneOffset))
 
 (defn- date->local-date-time
-  ""
   [^Date date]
   (LocalDateTime/ofInstant (.toInstant date) ZoneOffset/UTC))
 
 (defn- days
-  ""
   [^LocalDateTime start]
   (iterate (fn [day]
              (-> day
@@ -23,14 +22,12 @@
                (.truncatedTo ChronoUnit/HOURS))) start))
 
 (defn- days-range
-  ""
   ([^LocalDateTime start]
    (days-range start (LocalDateTime/now ZoneOffset/UTC)))
   ([^LocalDateTime start ^LocalDateTime end]
    (take-while #(.isBefore % end) (days start))))
 
 (defn- flattent-schedule
-  ""
   [schedule]
   (->> schedule
        (map (fn [{:schedule/keys [weekdays hours]}]
@@ -42,16 +39,14 @@
        (into {})))
 
 (defn- processor
-  ""
   [schedule]
   (fn [{:keys [day-of-week from to]}]
     (let [hours (get schedule day-of-week #{})]
       (->> hours
-           (filter #(and (> % from) (< % to)))
+           (filter #(and (>= % from) (< % to)))
            count))))
 
 (defn- day->internal-representation
-  ""
   [^LocalDateTime start ^LocalDateTime to]
   (fn [^LocalDateTime day]
     (let [date (.toLocalDate day)]
@@ -78,7 +73,11 @@
        [:fn (in-range 0 23)]]]]]])
 
 (defn ^{:added "0.1.0"} calculate-business-hours
-  ""
+  "Calculates the number of business hours that has elapsed between two dates.
+   ## Params
+   * `schedule` - list of weekdays and working hours
+   * `start-date` - date for starting computation
+   * `end-date` - date for interrupting computation"
   [schedule ^Date start-date ^Date end-date]
   (when-not (and (m/validate Schedule schedule)
                  (.before start-date end-date))
@@ -115,7 +114,6 @@
       (recur (rest days) schedule))))
 
 (defn- compute-date
-  ""
   [days hours-remainder schedule]
   (let [day (first days)
         day-of-week (.getDayOfWeek day)
@@ -135,7 +133,11 @@
    [:fn #(> % 0)]])
 
 (defn ^{:added "0.1.0"} calculate-date
-  ""
+  "Computes date which a given input of schedule, start-date and X business hours falls on.
+   ## Params
+   * `schedule` - list of weekdays and working hours
+   * `from` - start date
+   * `business-hours` - count of business hours"
   [schedule ^Date from business-hours]
   (when-not (and (m/validate Schedule schedule)
                  (m/validate BusinessHours business-hours))

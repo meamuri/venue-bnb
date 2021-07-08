@@ -1,5 +1,5 @@
 (ns venue-bnb.scoring
-  ""
+  "Proposes an algorithm for scoring and sorting based on 'most popular' venue."
   {:author "Roman Dronov"}
   (:require [malli.core :as m]))
 
@@ -16,7 +16,6 @@
     (+ rating-weight booking-weight)))
 
 (defn- normalize
-  ""
   [e]
   (let [score (compute-score e)]
     (assoc e :score score)))
@@ -34,7 +33,9 @@
   [:sequential Item])
 
 (defn ^{:added "0.1.0"} score
-  ""
+  "Scores and sorts 'popular' venues.
+   ## Params
+    * `items` - list of venues"
   [items]
   (when (m/validate Items items)
     (throw (ex-info "Illegal input" {})))
