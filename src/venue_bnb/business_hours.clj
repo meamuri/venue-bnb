@@ -1,5 +1,6 @@
 (ns venue-bnb.business-hours
   ""
+  {:author "Roman Dronov"}
   (:require [malli.core :as m])
   (:import java.util.Date
            java.time.DayOfWeek
@@ -58,28 +59,29 @@
        :from (if (= (.toLocalDate start) date) (.getHour start) 0)
        :to (if (= (.toLocalDate to) date) (.getHour to) 24)})))
 
-(defn in-range [a b]
+(defn- in-range [a b]
   (fn [x]
     (and (>= x a) (<= x b))))
 
 (def ^:private Schedule
-  [:map
-   [:schedule/weekdays
-    [:set
-     [:and
-      int?
-      [:fn (in-range 1 7)]]]]
-   [:schedule/hours
-    [:set
-     [:and
-      int?
-      [:fn (in-range 0 23)]]]]])
+  [:sequential
+   [:map
+    [:schedule/weekdays
+     [:set
+      [:and
+       int?
+       [:fn (in-range 1 7)]]]]
+    [:schedule/hours
+     [:set
+      [:and
+       int?
+       [:fn (in-range 0 23)]]]]]])
 
-(defn calculate-business-hours
+(defn ^{:added "0.1.0"} calculate-business-hours
   ""
   [schedule ^Date start-date ^Date end-date]
-  (when-not (or (m/validate Schedule schedule)
-                (.before start-date end-date))
+  (when-not (and (m/validate Schedule schedule)
+                 (.before start-date end-date))
     (throw (ex-info "Invalid input" {})))
   (let [start (date->local-date-time start-date)
         to (date->local-date-time end-date)
@@ -127,16 +129,16 @@
           Date/from)
       (find-in-reminder (rest days) schedule))))
 
-(def BusinessHours
+(def ^:private BusinessHours
   [:and
    int?
    [:fn #(> % 0)]])
 
-(defn calculate-date
+(defn ^{:added "0.1.0"} calculate-date
   ""
   [schedule ^Date from business-hours]
-  (when-not (or (m/validate Schedule schedule)
-                (m/validate BusinessHours business-hours))
+  (when-not (and (m/validate Schedule schedule)
+                 (m/validate BusinessHours business-hours))
     (throw (ex-info "Invalid input" {})))
   (let [days (days (date->local-date-time from))
         schedule' (flattent-schedule schedule)]

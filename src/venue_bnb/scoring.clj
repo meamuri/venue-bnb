@@ -1,5 +1,7 @@
 (ns venue-bnb.scoring
-  "")
+  ""
+  {:author "Roman Dronov"}
+  (:require [malli.core :as m]))
 
 (defn- rating-weight [rating reviews]
   (+ (* rating 1.1) (* reviews 1.8)))
@@ -19,8 +21,23 @@
   (let [score (compute-score e)]
     (assoc e :score score)))
 
-(defn score
+(def ^:private Item
+  [:map
+   [:venue string?]
+   [:booking-requests number?]
+   [:reservations number?]
+   [:response-rate number?]
+   [:reviews number?]
+   [:rating number?]])
+
+(def ^:private Items
+  [:sequential Item])
+
+(defn ^{:added "0.1.0"} score
+  ""
   [items]
+  (when (m/validate Items items)
+    (throw (ex-info "Illegal input" {})))
   (let [sort (partial sort-by :score)]
     (->> items
          (map normalize)
