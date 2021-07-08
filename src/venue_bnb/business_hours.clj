@@ -2,7 +2,8 @@
   "Each venue has different opening hours for their booking office.
    Module allows to compute different useful time-related stuff."
   {:author "Roman Dronov"}
-  (:require [malli.core :as m])
+  (:require [malli.core :as m]
+            [venue-bnb.business-hours.schema :as schema])
   (:import java.util.Date
            java.time.DayOfWeek
            java.time.LocalDateTime
@@ -54,24 +55,6 @@
        :from (if (= (.toLocalDate start) date) (.getHour start) 0)
        :to (if (= (.toLocalDate to) date) (.getHour to) 24)})))
 
-(defn- in-range [a b]
-  (fn [x]
-    (and (>= x a) (<= x b))))
-
-(def ^:private Schedule
-  [:sequential
-   [:map
-    [:schedule/weekdays
-     [:set
-      [:and
-       int?
-       [:fn (in-range 1 7)]]]]
-    [:schedule/hours
-     [:set
-      [:and
-       int?
-       [:fn (in-range 0 23)]]]]]])
-
 (defn ^{:added "0.1.0"} calculate-business-hours
   "Calculates the number of business hours that has elapsed between two dates.
    ## Params
@@ -79,7 +62,7 @@
    * `start-date` - date for starting computation
    * `end-date` - date for interrupting computation"
   [schedule ^Date start-date ^Date end-date]
-  (when-not (and (m/validate Schedule schedule)
+  (when-not (and (m/validate schema/Schedule schedule)
                  (.before start-date end-date))
     (throw (ex-info "Invalid input" {})))
   (let [start (date->local-date-time start-date)
@@ -127,11 +110,6 @@
           Date/from)
       (find-in-reminder (rest days) schedule))))
 
-(def ^:private BusinessHours
-  [:and
-   int?
-   [:fn #(> % 0)]])
-
 (defn ^{:added "0.1.0"} calculate-date
   "Computes date which a given input of schedule, start-date and X business hours falls on.
    ## Params
@@ -139,8 +117,8 @@
    * `from` - start date
    * `business-hours` - count of business hours"
   [schedule ^Date from business-hours]
-  (when-not (and (m/validate Schedule schedule)
-                 (m/validate BusinessHours business-hours))
+  (when-not (and (m/validate schema/Schedule schedule)
+                 (m/validate schema/BusinessHours business-hours))
     (throw (ex-info "Invalid input" {})))
   (let [days (days (date->local-date-time from))
         schedule' (flattent-schedule schedule)]
