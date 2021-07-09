@@ -1,4 +1,5 @@
-(ns venue-bnb.scoring-algo
+(ns venue-bnb.scoring.scoring-algo
+  {:author "Roman Dronov"}
   (:require [venue-bnb.scoring.validation :refer [validate]]))
 
 (defn- reviews-compare
