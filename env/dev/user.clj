@@ -5,8 +5,4 @@
 (comment
   (-> (slurp "./sample-data.edn")
       edn/read-string
-      scoring/score-with-math)
-
-  (-> (slurp "./sample-data.edn")
-      edn/read-string
-      scoring/score-with-algorithm))
+      scoring/score-with-math))

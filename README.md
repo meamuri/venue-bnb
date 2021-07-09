@@ -1,3 +1,28 @@
+# Usage
+
+## Task 1
+
+Run `lein repl` and type:
+
+```clojure
+(-> (slurp "./sample-data.edn")
+    edn/read-string
+    scoring/score-with-math)
+```
+
+Make sure that you have expected `"./sample-data.edn"` test file
+and that you launch code from `user` namespace.
+If you are in another namespace, please, execute before testing:
+```clojure
+(require '[venue-bnb.scoring :as scoring]
+         '[clojure.edn :as edn])
+```
+
+## Task 2 & 3
+
+Just use tests in `test/venue_bnb/business_hours_test.clj`.
+Change any test inputs and use `lein kaocha` for running tests.
+
 # Eventum technical exercise
 
 ## Task 1: Scoring and sorting
