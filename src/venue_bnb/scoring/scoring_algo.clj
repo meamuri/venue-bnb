@@ -3,35 +3,33 @@
   (:require [venue-bnb.scoring.validation :refer [validate]]))
 
 (defn- reviews-compare
-  [lft rgt]
-  (let [{l-rating :rating
-         l-reviews :reviews} lft
-        {r-rating :rating
-         r-reviews :reviews} rgt
-        ratio (max (/ l-reviews r-reviews) (/ r-reviews l-reviews))]
+  [{l-rating :rating
+    l-reviews :reviews}
+   {r-rating :rating
+    r-reviews :reviews}]
+  (let [ratio (max (/ l-reviews r-reviews) (/ r-reviews l-reviews))]
     (if (> ratio 4)
       ;; if difference between reviews is significant, just return reviews winner
       ;; in this case rating difference doesn't matter
-      (comp l-reviews r-reviews)
+      (compare l-reviews r-reviews)
       ;; here reviews ration check
       (if (and (not= l-rating r-rating)
                (> (Math/abs (- l-rating r-rating)) ratio))
         ;; if difference betweeb rating more than
-        (comp l-rating r-rating)
+        (compare l-rating r-rating)
         ;; if rating is comparable let's use anouther metrics: we can't make decision
         nil))))
 
 (defn- booking-compare
-  [lft rgt]
-  (let [{l-booking-requests :booking-requests
-         l-reservations :reservations} lft
-        {r-booking-requests :booking-requests
-         r-reservations :reservations} rgt]
-    (if (not= l-reservations r-reservations)
-      (comp l-reservations r-reservations)
-      (if (not= l-booking-requests r-booking-requests)
-        (comp l-booking-requests r-booking-requests)
-        nil))))
+  [{l-booking-requests :booking-requests
+    l-reservations :reservations}
+   {r-booking-requests :booking-requests
+    r-reservations :reservations}]
+  (if (not= l-reservations r-reservations)
+    (compare l-reservations r-reservations)
+    (if (not= l-booking-requests r-booking-requests)
+      (compare l-booking-requests r-booking-requests)
+      nil)))
 
 (defn- compare-venues
   [lft rgt]
@@ -43,7 +41,7 @@
       booking-ratio
       ;; if entities almost similar by previous criterias
       ;; just sort by name ))
-      (comp (:venue lft) (:venue rgt)))))
+      (compare (:venue lft) (:venue rgt)))))
 
 (defn ^{:added "0.1.0"} score
   "Scores and sorts 'popular' venues.
