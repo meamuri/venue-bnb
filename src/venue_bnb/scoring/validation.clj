@@ -4,16 +4,16 @@
 (def ^:private Item
   [:map
    [:venue string?]
-   [:booking-requests number?]
-   [:reservations number?]
-   [:response-rate number?]
-   [:reviews number?]
-   [:rating number?]])
+   [:booking-requests {:optional true} [:or number? nil?]]
+   [:reservations {:optional true} [:or number? nil?]]
+   [:response-rate {:optional true} [:or number? nil?]]
+   [:reviews {:optional true} [:or number? nil?]]
+   [:rating {:optional true} [:or number? nil?]]])
 
 (def ^:private Items
-  [:sequential Item])
+  [:* Item])
 
 (defn validate
   [items]
-  (when (m/validate Items items)
+  (when-not (m/validate Items items)
     (throw (ex-info "Illegal input" {}))))
