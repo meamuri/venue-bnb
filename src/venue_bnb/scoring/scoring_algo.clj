@@ -2,33 +2,53 @@
   {:author "Roman Dronov"}
   (:require [venue-bnb.scoring.validation :refer [validate]]))
 
+(defn safety-ration
+  [lft rgt]
+  (if (and (nil? lft) (nil? rgt))
+    nil
+    (if (or (and (nil? lft)
+                 (some? rgt))
+            (and (some? lft)
+                 (nil? rgt)))
+      ##Inf
+      (max (/ lft rgt) (/ rgt lft)))))
+
+(defn- careful-compare
+  [lft rgt]
+  (let [res (compare lft rgt)]
+    (when (not= 0 res)
+      res)))
+
 (defn- reviews-compare
   [{l-rating :rating
     l-reviews :reviews}
    {r-rating :rating
     r-reviews :reviews}]
-  (let [ratio (max (/ l-reviews r-reviews) (/ r-reviews l-reviews))]
-    (if (> ratio 4)
-      ;; if difference between reviews is significant, just return reviews winner
-      ;; in this case rating difference doesn't matter
-      (compare l-reviews r-reviews)
-      ;; here reviews ration check
-      (if (and (not= l-rating r-rating)
-               (> (Math/abs (- l-rating r-rating)) ratio))
-        ;; if difference betweeb rating more than
-        (compare l-rating r-rating)
-        ;; if rating is comparable let's use anouther metrics: we can't make decision
-        nil))))
+  (if (= l-rating r-rating)
+    (careful-compare l-reviews r-reviews)
+    (let [ratio (safety-ration l-reviews r-reviews)]
+      (if (or (nil? ratio) (= ##Inf ratio))
+        (careful-compare l-rating r-rating)
+        (if (> ratio 4)
+          ;; if difference between reviews is significant, just return reviews winner
+          ;; in this case rating difference doesn't matter
+          (careful-compare l-reviews r-reviews)
+          ;; here reviews ration check
+          (if (> (Math/abs (- l-rating r-rating)) ratio)
+            ;; if difference betweeb rating more than
+            (careful-compare l-rating r-rating)
+            ;; if rating is comparable let's use anouther metrics: we can't make decision
+            nil))))))
 
 (defn- booking-compare
   [{l-booking-requests :booking-requests
     l-reservations :reservations}
    {r-booking-requests :booking-requests
     r-reservations :reservations}]
-  (if (not= l-reservations r-reservations)
-    (compare l-reservations r-reservations)
-    (if (not= l-booking-requests r-booking-requests)
-      (compare l-booking-requests r-booking-requests)
+  (if-let [r (careful-compare l-reservations r-reservations)]
+    r
+    (if-let [r (careful-compare l-booking-requests r-booking-requests)]
+      r
       nil)))
 
 (defn- compare-venues
@@ -52,5 +72,4 @@
   (let [sort (partial sort-by :score)]
     (->> items
          (sort compare-venues)
-         (map #(dissoc % :score))
-         reverse)))
+         (map #(dissoc % :score)))))
