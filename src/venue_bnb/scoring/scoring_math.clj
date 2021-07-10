@@ -19,15 +19,21 @@
   (let [score (compute-score e)]
     (assoc e :score score)))
 
+(defn compare-venues
+  [left-venue right-venue]
+  (let [score-res (compare (:score left-venue) (:score right-venue))]
+    (if (not= 0 score-res)
+      score-res
+      (compare (:venue left-venue) (:venue right-venue)))))
+
 (defn ^{:added "0.1.0"} score
   "Scores and sorts 'popular' venues.
    ## Params
     * `items` - list of venues"
   [items]
   (validate items)
-  (let [sort (partial sort-by :score)]
-    (->> items
-         (map normalize)
-         sort
-         (map #(dissoc % :score))
-         reverse)))
+  (->> items
+       (map normalize)
+       (sort compare-venues)
+       (map #(dissoc % :score))
+       reverse))
