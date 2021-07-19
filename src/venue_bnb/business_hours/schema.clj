@@ -2,7 +2,7 @@
 
 (defn- in-range [a b]
   (fn [x]
-    (and (>= x a) (<= x b))))
+    (<= a x b)))
 
 (def Schedule
   [:sequential
@@ -21,4 +21,4 @@
 (def BusinessHours
   [:and
    int?
-   [:fn #(> % 0)]])
+   pos?])

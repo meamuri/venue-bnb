@@ -5,10 +5,10 @@
   (:require [malli.core :as m]
             [venue-bnb.business-hours.schema :as schema])
   (:import java.util.Date
-           java.time.DayOfWeek
-           java.time.LocalDateTime
-           java.time.temporal.ChronoUnit
-           java.time.ZoneOffset))
+           (java.time DayOfWeek
+                      LocalDateTime
+                      ZoneOffset)
+           java.time.temporal.ChronoUnit))
 
 (defn- date->local-date-time
   [^Date date]
@@ -18,9 +18,9 @@
   [^LocalDateTime start]
   (iterate (fn [day]
              (-> day
-               (.plusDays 1)
-               (.withHour 0)
-               (.truncatedTo ChronoUnit/HOURS))) start))
+                 (.plusDays 1)
+                 (.withHour 0)
+                 (.truncatedTo ChronoUnit/HOURS))) start))
 
 (defn- days-range
   ([^LocalDateTime start]
@@ -31,10 +31,9 @@
 (defn- flattent-schedule
   [schedule]
   (->> schedule
-       (map (fn [{:schedule/keys [weekdays hours]}]
-              (mapv (fn [e]
-                      [e hours]) weekdays)))
-       (mapcat identity)
+       (mapcat (fn [{:schedule/keys [weekdays hours]}]
+                 (mapv (fn [e]
+                         [e hours]) weekdays)))
        (map (fn [[k v]]
               [(DayOfWeek/of k) v]))
        (into {})))
@@ -103,7 +102,7 @@
         day-schedule (get schedule day-of-week #{})
         business-hours (sort day-schedule)
         h (-> (drop hours-remainder business-hours) first)]
-    (if (some? h)
+    (if h
       (-> day
           (.withHour h)
           (.toInstant ZoneOffset/UTC)
